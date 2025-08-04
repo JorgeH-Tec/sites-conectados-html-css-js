@@ -55,8 +55,7 @@ Este projeto foi idealizado para treinar:
 
 ## 🚀 Como visualizar localmente  
 
-1. Clone este repositório no gitbash:   
-git clone https://github.com/seuusuario/sites-conectados-html-css-js.git  
+1. Faça o download deste código e organize as pastas referentes aos dois sites dentro de uma mesma pasta raiz para facilitar a navegação e execução local.  
 
 2. Abra o arquivo index.html dentro de cada pasta (site-1/ e site-2/) em seu navegador.  
    
