@@ -1,0 +1,451 @@
+/*Limpar formatações padrão*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1em;
+	color: #3a0042;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	/* imagem por cima, degradezin por baixo */
+	background-image:
+		url('../imagens/logo-tg.png'),
+		linear-gradient(to bottom, #fefdff, #f9f5ff);
+	background-repeat: repeat, no-repeat;
+	background-size: 50px auto, cover;
+
+	/* opacidade na imagem de fundo */
+	background-blend-mode: overlay;
+}
+
+/*
+**** Layout ****
+*/
+
+#area-cabecalho {
+	background-color: rgb(170, 0, 170);
+	padding: 15px;
+	text-align: center;
+}
+
+#area-logo,
+#area-menu {
+	padding: 10px;
+}
+
+#area-principal {
+	width: 920px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+#area-postagens {
+	width: 660px;
+	float: left;
+}
+
+#area-lateral {
+	width: 240px;
+	float: right;
+}
+
+.postagem {
+	padding: 20px;
+	margin-bottom: 20px;
+	background: linear-gradient(to bottom right, #f8e8ff, #fdf7ff);
+	/* degradezin */
+
+	border-radius: 12px;
+	box-shadow: 0 2px 5px rgb(170, 0, 170);
+	/* sombra*/
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+}
+
+.conteudo-lateral {
+	background: linear-gradient(to bottom right, #f8e8ff, #fdf7ff);
+	color: black;
+	/* texto claro */
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	box-shadow: 0 1px 4px rgb(170, 0, 170);
+	/* sombra */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conteudo-lateral h3 {
+	color: rgb(170, 0, 170);
+	/* título com destaque */
+	margin-top: 0;
+}
+
+.postagem-lateral {
+	font-size: 0.8em;
+	padding: 5px;
+	border-bottom: 1px dotted #CCC;
+}
+
+.postagem-lateral-h3 {
+	background: #f0e6ff;
+	padding: 5px 10px;
+	border-radius: 10px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	border: 2px solid rgb(170, 0, 170);
+}
+
+#rodape {
+	clear: both;
+	text-align: center;
+	padding: 15px;
+	background: #CCC;
+}
+
+.area-principal-enginetable {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.area-postagens-enginetable {
+	width: 830px;
+	float: left;
+}
+
+/*
+**** Formatação do menu ****
+*/
+
+a {
+	text-decoration: none;
+	color: #d51fd8;
+}
+
+a:link,
+a:visited {
+	color: rgb(170, 0, 170);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#area-cabecalho a:link,
+#area-cabecalho a:visited {
+	color: #FFF;
+	padding: 8px 12px;
+}
+
+#area-cabecalho a:hover {
+	color: rgb(170, 0, 170);
+	background: #FFF;
+	text-decoration: none;
+}
+
+/*
+**** Formatações em geral ****
+*/
+h1 {
+	color: #4e4e4e;
+	font-size: 2.5em;
+}
+
+.h1bemvindo {
+	color: rgb(170, 0, 170);
+	text-align: center;
+	border-bottom: 2px dashed rgb(170, 0, 170);
+}
+
+h2 {
+	color: rgb(170, 0, 170);
+}
+
+h3 {
+	color: rgb(170, 0, 170);
+	text-align: center;
+
+
+	/* 
+	cor do texto do título (branco) 
+	background: #f0e6ff;
+	padding: 5px 10px;
+	border-radius: 10px;
+	cantos arredondados 
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+	sombra suave 
+	text-align: center;
+	centraliza o título 
+	border: 2px solid rgb(170, 0, 170);
+	borda branca ao redor do título 
+	*/
+}
+
+.branco {
+	color: white;
+}
+
+.data-postagem {
+	font-size: 0.8em;
+	border-bottom: 1px solid #f4f4f4;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.espacin {
+	padding: 30px;
+}
+
+/*slides dispositivos*/
+
+.carrossel {
+	position: relative;
+	width: 600px;
+	height: 300px;
+	margin: 40px auto;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.slides {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.slide {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slide.ativo {
+	opacity: 1;
+	z-index: 2;
+}
+
+/* Setas */
+.seta {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	/* Ajusta para garantir que fique centrada no eixo Y */
+	width: 30px;
+	height: 50px;
+	background: #333;
+
+	/* Degradzin roxo para preto: linear-gradient(to right, rgb(170, 0, 170), black) */
+	/* background transparente e com bardas?: transparent */
+	/* degradezin preto: background: linear-gradient(to right, #000, #333); */
+
+	
+	color: white;
+	border: none;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	z-index: 20;
+	/* Garante que a seta fique sobre as imagens */
+	display: flex;
+	/* Usamos flexbox para centralizar o conteúdo */
+	align-items: center;
+	/* Alinha o conteúdo verticalmente */
+	justify-content: center;
+	/* Alinha o conteúdo horizontalmente */
+	opacity: 0.5;
+
+}
+
+.seta.esquerda {
+	left: 0;
+	/* Gruda a seta na borda esquerda */
+
+
+	border-top-right-radius: 15px;
+	/* Arredonda o canto superior direito */
+	border-bottom-right-radius: 15px;
+	/* Arredonda o canto inferior direito */
+	border-top-left-radius: 0px;
+	/* Deixa o lado esquerdo reto */
+	border-bottom-left-radius: 0px;
+	/* Deixa o lado esquerdo reto */
+
+}
+
+.seta.direita {
+	right: 0;
+	/* Gruda a seta na borda direita */
+
+
+	border-top-right-radius: 0px;
+	/* Arredonda o canto superior direito */
+	border-bottom-right-radius: 0px;
+	/* Arredonda o canto inferior direito */
+	border-top-left-radius: 15px;
+	/* Deixa o lado esquerdo reto */
+	border-bottom-left-radius: 15px;
+	/* Deixa o lado esquerdo reto */
+}
+
+
+
+
+/* 
+
+Bolinhas css
+
+.bolinhas {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	z-index: 3;
+}
+
+.bolinhas span {
+	width: 12px;
+	height: 12px;
+	background: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.bolinhas .ativa {
+	background: #555;
+}
+
+*/
+
+/*lista*/
+
+ul.sem-marcador {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.sem-marcador li {
+	margin-bottom: 1.3em;
+	/* espaço entre os itens */
+	line-height: 1;
+	/* melhora a leitura */
+}
+
+/*video e imagem*/
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	/* proporção 16:9 */
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.imagemlegal {
+	border-radius: 10px;
+}
+
+/*cod*/
+
+.code-block {
+	background-color: #1e1e1e;
+	color: #dcdcdc;
+	padding: 1rem;
+	border-radius: 8px;
+	overflow-x: auto;
+	font-family: 'Courier New', monospace;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	max-width: 100%;
+	white-space: pre-wrap;
+}
+
+/* letrinhas bonitinhas */
+.code-keyword {
+	color: #569CD6;
+}
+
+.code-function {
+	color: #DCDCAA;
+}
+
+.code-class {
+	color: #4EC9B0;
+}
+
+.code-comment {
+	color: #6A9955;
+	font-style: italic;
+}
+
+.code-number {
+	color: #B5CEA8;
+}
+
+/* ==== Tabelinha ==== */
+table {
+	border-collapse: collapse;
+	width: 800;
+	border: 1px solid;
+	margin: 0 auto;
+}
+
+th,
+td {
+	text-align: center;
+	padding: 7px;
+}
+
+td {
+	border-color: black;
+	border-left: 1px solid;
+}
+
+th {
+	background-color: rgb(170, 0, 170);
+	color: white;
+	border: 1px solid;
+	border-color: black;
+}
+
+tr:nth-child(even) {
+	background-color: rgb(255, 213, 255);
+}
+
+.conteinereufiztabela {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.emoji-pin {
+	display: inline-block;
+	border-radius: 4px;
+	padding: 0px;
+	font-size: 28px;
+}
