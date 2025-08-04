@@ -21,19 +21,19 @@ Ambos os sites funcionam de forma independente, mas foram planejados para **poss
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto  
 
-sites-conectados-html-css-js/
-│
-├── site-1/
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
-│
-├── site-2/
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
+sites-conectados-html-css-js/  
+│  
+├── site-1/  
+│ ├── index.html  
+│ ├── style.css  
+│ └── script.js  
+│  
+├── site-2/  
+│ ├── index.html  
+│ ├── style.css  
+│ └── script.js  
 
 Cada pasta contém os arquivos correspondentes a um dos sites. Ambos possuem estilo próprio e podem ser acessados diretamente, mas incluem links que levam ao outro site.
 
@@ -62,7 +62,7 @@ git clone https://github.com/seuusuario/sites-conectados-html-css-js.git
 
 ## 📫 Contato
 
-[GitHub](https://github.com/JorgeH-Tec)  
+GitHub: https://github.com/JorgeH-Tec   
 Email: jorge.paiv4@gmail.com
 
 ⭐ Obrigado por visitar! Este projeto representa parte do meu processo de aprendizado com HTML, CSS e JavaScript, simulando uma navegação entre páginas independentes de maneira organizada e funcional.
