@@ -63,7 +63,7 @@ Este projeto foi idealizado para treinar:
 
 ## 📫 Contato
 
-GitHub: https://github.com/JorgeH-Tec   
-Email: jorge.paiv4@gmail.com
+- Email: **jorge.paiv4@gmail.com**
+- LinkedIn: [Linkedin](https://www.linkedin.com/in/jorge-henrique-16b567263/)
 
 ⭐ Obrigado por visitar! Este projeto representa parte do meu processo de aprendizado com HTML, CSS e JavaScript, simulando uma navegação entre páginas independentes de maneira organizada e funcional.
